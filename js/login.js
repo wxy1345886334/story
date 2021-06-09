@@ -1,0 +1,1 @@
+var search1=location.search;$(".biglogin").click(function(){var e=$("[name='username']").val(),a=$("[name='password']").val();$.ajax({url:"../php/login.php",type:"get",data:`username=${e}&password=${a}`,success:function(a){console.log(a),1==a?(setCookie("name",e),search1?(a=search1.split("=")[1],location.href=a):location.href="../pages/index.html"):alert("登录失败")}})});
